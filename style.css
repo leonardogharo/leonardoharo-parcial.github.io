@@ -321,3 +321,11 @@ body {
         margin-bottom: 2rem;
     }
 }
+/* Subtítulos dentro del texto de presentación */
+.about-subtitle {
+    font-size: 1.4rem;
+    color: var(--bg-dark); /* Utiliza el tono azul oscuro para destacar */
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
