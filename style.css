@@ -3,7 +3,7 @@
    ========================================================================== */
 :root {
     --bg-light: #f8f6f0;
-    --bg-dark: #1c1c1c; /* Cambiado a un negro/gris muy oscuro */
+    --bg-dark: #1c1c1c; 
     --accent-yellow: #ffcc4d;
     --text-main: #111111;
     --text-muted: #555555;
@@ -95,8 +95,8 @@ body {
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Permite que el contenedor de la imagen llegue al fondo */
-    padding: 4rem 5% 0 5%; /* Sin padding inferior para que la imagen apoye al ras */
+    align-items: stretch;
+    padding: 4rem 5% 0 5%;
     min-height: 70vh;
 }
 
@@ -104,22 +104,17 @@ body {
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente */
-    padding-bottom: 4rem; /* Recupera el padding inferior solo para el texto */
+    justify-content: center;
+    padding-bottom: 4rem;
 }
 
+/* Título de Hero ajustado a versión Light */
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1.1;
     margin-bottom: 1rem;
-}
-
-.hero-content h1 span {
-    font-size: 5rem;
-}
-
-.hero-content h1::first-line {
-    color: var(--accent-yellow);
+    font-weight: 300; /* Tipografía Light */
+    color: var(--text-main);
 }
 
 .hero-content p {
@@ -138,7 +133,7 @@ body {
     font-weight: 700;
     transition: background 0.3s ease;
     border-radius: 4px;
-    align-self: flex-start; /* Evita que el botón se estire con flex-direction column */
+    align-self: flex-start;
 }
 
 .btn-primary:hover {
@@ -148,14 +143,14 @@ body {
 .hero-image {
     max-width: 45%;
     display: flex;
-    align-items: flex-end; /* Empuja la imagen contra el borde inferior */
+    align-items: flex-end;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block; /* Quita el margen inferior por defecto de las imágenes */
+    display: block;
 }
 
 /* ==========================================================================
@@ -401,7 +396,7 @@ body {
     
     .hero-content {
         padding-bottom: 2rem;
-        align-items: center; /* Centra el contenido interior (como el botón) en móvil */
+        align-items: center;
     }
 
     .hero-content p {
