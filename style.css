@@ -139,11 +139,11 @@ body {
     color: #e0e0e0;
 }
 
-/* Grid de la Galería */
+/* Grid de la Galería: Forzado a 4 columnas una al lado de la otra */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .card {
@@ -151,25 +151,18 @@ body {
     flex-direction: column;
 }
 
-/* Ajuste clave para imágenes verticales 1080x1920 (proporción 9:16) */
+/* Proporción vertical estricta 9:16 */
 .card img {
     width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: cover;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .card-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
     color: var(--text-white);
-}
-
-.card-content p {
-    font-size: 0.9rem;
-    color: #cccccc;
-    margin-bottom: 1rem;
-    line-height: 1.6;
 }
 
 .explore-link {
@@ -185,6 +178,14 @@ body {
 }
 
 /* --- Responsividad --- */
+@media (max-width: 992px) {
+    /* En tablets se acomodan de a dos para que no queden tan angostas */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -207,5 +208,12 @@ body {
     
     .gallery-header p {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En celulares muy chicos se ven una debajo de la otra */
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }
