@@ -338,3 +338,31 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   Footer (Licencia)
+   ========================================================================== */
+.site-footer {
+    text-align: center;
+    padding: 2rem 5%;
+    background-color: var(--bg-dark); /* Continúa con el fondo oscuro de la galería */
+    color: #cccccc; /* Un gris claro para que no resalte demasiado */
+    font-size: 0.85rem;
+}
+
+/* Estilo para los enlaces de la licencia */
+.site-footer a {
+    color: var(--accent-yellow);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.site-footer a:hover {
+    opacity: 0.8;
+}
+
+/* Alineación de los íconos de Creative Commons con el texto */
+.site-footer img {
+    vertical-align: middle; 
+    margin-bottom: 3px;
+}
