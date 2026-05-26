@@ -217,3 +217,107 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   Nuevos Estilos para sobremi.html
+   ========================================================================== */
+
+/* Contenedor principal de la presentación */
+.about-section {
+    padding: 5rem 5%;
+    background-color: var(--bg-light);
+}
+
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Ajuste de la foto de perfil (Más chica) */
+.about-image {
+    flex: 1;
+    max-width: 320px; /* Controla el ancho máximo de la imagen lateral */
+    min-width: 260px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bloque de texto */
+.about-text {
+    flex: 2;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sección de Inspiración con el fondo azul oscuro de la galería */
+.inspiration-section {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.inspiration-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inspiration-section h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor adaptativo para que el video mantenga proporción 16:9 en móviles */
+.video-container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Adaptación para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    
+    .about-image {
+        max-width: 240px;
+        margin: 0 auto;
+    }
+    
+    .inspiration-section {
+        padding: 4rem 5%;
+    }
+    
+    .inspiration-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+}
